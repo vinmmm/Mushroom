@@ -1,0 +1,29 @@
+body{
+	background-color: blue;
+
+}
+
+img {
+	
+}
+
+.title{
+padding-left: 321px
+
+}
+
+.logo {
+	float: left; width: 300px;
+}
+
+.meetup {
+	float: left; width: 300px;
+	padding-left: 12px;
+
+}
+
+.space {
+	float: left; width: 400px;
+	padding-left: 12px;
+
+}

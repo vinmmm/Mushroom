@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="meetupApp"> 
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Mushrooms</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+
+     <div class="logo">
+        <img src="/img/mushroom.png" alt="logo">
+
+      </div> 
+
+<h1 class="title">Amy's 3rd annual Classic Hippy Open Art Show on 01/07/2016</h1>
+      <!-- Meetups View -->
+      <div class="meetup" ng-controller="meetupsController">
+        <h2>Sign Up</h2>
+        <h3>There are {{meetups.length}} People Attending</h3>
+        <ol>
+          <li ng-repeat="meetup in meetups">
+            {{meetup.name}}
+          </li>
+        </ol>
+        <form ng-submit="createMeetup()">
+          <input type="text" placeholder="name" ng-model="meetupName"></input>
+          <button type="submit">Add</button>
+        </form> 
+        </div> 
+         <div class="space" ng-controller="spacesController">
+        <h1>Spaces</h1>
+        <h2>Request Space</h2>
+        <h3>There are {{spaces.length}} standard 4' by 4' spaces needed.</h3>
+        <ol>
+          <li ng-repeat="space in spaces">
+            {{space.name}}
+          </li>
+        </ol>
+        <form ng-submit="createSpace()">
+          <input type="text" placeholder="space size" ng-model="spaceName"></input>
+          <button type="submit">Add</button>
+        </form> 
+      </div>
+ <br style="clear: left;" />
+     
+
+      
+      
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+
+      <script type="text/javascript" src="/js/app.js"></script>
+      <script type="text/javascript" src="/js/controllers/meetups-controller.js"></script>
+      <script type="text/javascript" src="/js/controllers/spaces-controller.js"></script>
+  </body>
+</html>
+
+<!-- https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js -->
